@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+
+using EV.Dtos;
 
 namespace EV.Controllers
 {
@@ -11,10 +8,16 @@ namespace EV.Controllers
     [ApiController]
     public class DataController : Controller {
 
-        // POST /api/PetData
-        [HttpPost("PetData")]
+        // POST /api/PetDetails
+        [HttpPost("PetDetails")]
         public ActionResult PetDetails(PetDetailsInputDto p) {
             return Ok(p);
+        }
+
+        // GET /api/Out
+        [HttpGet("Out")]
+        public ActionResult Out() {
+            return Ok("String");
         }
     }
 }

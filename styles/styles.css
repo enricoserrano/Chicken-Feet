@@ -6,3 +6,7 @@ body {
 .navbar {
     background-color: #1ba39c !important;
 }
+.form-class {
+    width: 30%;
+    display: inline-block;
+}

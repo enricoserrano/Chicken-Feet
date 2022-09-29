@@ -92,8 +92,8 @@
         <input
           class="form-check-input"
           type="radio"
-          name="inlineRadioOptions"
-          id="inlineRadio1"
+          name="gender"
+          id="gendermale"
           value="Male"
         />
         <label class="form-check-label" for="inlineRadio1">Male</label>
@@ -103,8 +103,8 @@
         <input
           class="form-check-input"
           type="radio"
-          name="inlineRadioOptions"
-          id="inlineRadio2"
+          name="gender"
+          id="genderfemale"
           value="Female"
         />
         <label class="form-check-label" for="inlineRadio2">Female</label>
@@ -114,8 +114,8 @@
         <input
           class="form-check-input"
           type="radio"
-          name="inlineRadioOptions"
-          id="inlineRadio3"
+          name="gender"
+          id="genderspayed"
           value="Spayed"
         />
         <label class="form-check-label" for="inlineRadio3">Spayed</label>
@@ -125,14 +125,14 @@
         <input
           class="form-check-input"
           type="radio"
-          name="inlineRadioOptions"
-          id="inlineRadio3"
+          name="gender"
+          id="genderneuter"
           value="Neuter"
         />
         <label class="form-check-label" for="inlineRadio3">Neuter</label>
       </div>
       <div class="form-outline mb-3">
-        <button type="button" class="btn btn-success">Check</button>
+        <button type="button" class="btn btn-success" onclick="testform()">Check</button>
       </div>
     </div>
     <div class="popup-align">
@@ -161,6 +161,14 @@
             break;
         }
         popup.classList.toggle("show");
+      }
+
+      function testform() {
+        console.log(document.getElementById('speciesType').value);
+        console.log(document.getElementById('breed').value);
+        console.log(document.getElementById('weight').value);
+        console.log(document.getElementById('age').value);
+        console.log(document.querySelector('input[name="gender"]:checked').value);
       }
     </script>
     <!-- MDB -->

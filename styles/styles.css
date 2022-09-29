@@ -17,6 +17,7 @@ body {
   width: 200px;
   background-color: #1ba39c;
   padding: 5px;
+  border-radius: 0.4rem 0 0 0.4rem
 }
 /* Popup container - can be anything you want */
 .popup {

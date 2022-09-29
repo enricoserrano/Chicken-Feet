@@ -4,7 +4,7 @@ body {
   color: black !important;
 }
 .navbar {
-  background-color: #1ba39c !important;
+  background-color: #122145 !important;
 }
 .form-class {
   width: 30%;
@@ -15,7 +15,7 @@ body {
   right: 0px;
   bottom: 0px;
   width: 200px;
-  background-color: lightblue;
+  background-color: #1ba39c;
   padding: 5px;
 }
 /* Popup container - can be anything you want */

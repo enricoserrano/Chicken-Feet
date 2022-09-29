@@ -19,14 +19,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
     <title>Form Page</title>
     <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
   </head>
   <body>
     <header>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white text-light">
         <div class="container-fluid">
           <button
             class="navbar-toggler"
@@ -127,14 +130,29 @@
       </div>
     </div>
     <div class="popup-align">
-      <div class="popup" onclick="myFunction()">
-        Random Pet Facts
+      <div class="popup" onclick="petFacts()">
+        <i class="bi bi-lightbulb">Pet Facts</i>
         <span class="popuptext" id="myPopup">A Simple Popup!</span>
       </div>
     </div>
     <script>
-      function myFunction() {
+      function petFacts() {
         var popup = document.getElementById("myPopup");
+        var facts1 = "A cat has 32 muscles in each ear, humans only have 6";
+        var facts2 = "Cats spend 15-20% of their time grooming";
+        var facts3 = "A dog’s sense of smell is so precise, it could detect a teaspoon of sugar in a million gallons of water, or two Olympic-sized pools worth";
+        var randomNumber = Math.floor(Math.random() * 2);
+        switch (randomNumber) {
+          case 0:
+            document.getElementById("myPopup").innerHTML = facts1;
+            break;
+          case 1:
+          document.getElementById("myPopup").innerHTML = facts2;
+            break;
+          case 2:
+          document.getElementById("myPopup").innerHTML = facts3;
+            break;
+        }
         popup.classList.toggle("show");
       }
     </script>

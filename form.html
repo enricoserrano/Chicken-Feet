@@ -78,6 +78,24 @@
         <input type="text" id="speciesType" class="form-control" />
         <label class="form-label" for="speciesType">Species Type</label>
       </div>
+
+      <div class="form-outline mb-3">
+        <label for="breed">Breed</label>
+        <select class="form-control" id="breed">
+           <option>Beagles</option>
+           <option>Boxers</option>
+           <option>Bull Mastiff</option>
+           <option>Bloodhounds</option>
+           <option>Dalmatian</option>
+           <option>German Shepherd</option>
+           <option>Great Danes</option>
+           <option>Labrador</option>
+           <option>Pug</option>
+           <option>Rottweilers</option>
+           <option>St. Bernards</option>
+        </select>
+     </div>
+
       <div class="form-outline mb-3">
         <input type="text" id="height" class="form-control" />
         <label class="form-label" for="height">Height</label>
@@ -92,7 +110,7 @@
         <input type="text" id="age" class="form-control" />
         <label class="form-label" for="age">Age</label>
       </div>
-
+      <div class="form-outline mb-3">
       <div class="form-check form-check-inline">
         <input
           class="form-check-input"
@@ -136,6 +154,7 @@
         />
         <label class="form-check-label" for="inlineRadio3">Neutered</label>
       </div>
+      </div>
       <div class="form-outline mb-3">
         <button type="button" class="btn btn-success" onclick="testform()">Check</button>
       </div>
@@ -173,7 +192,9 @@
 
       function testform() {
         const fetchPromise = fetch("http://localhost:8081/api/Out").then((response) => response.text()).then((data) => console.log(data));
+        console.log(document.getElementById('speciesType').value);
         console.log(document.getElementById('breed').value);
+        console.log(document.getElementById('height').value);
         console.log(document.getElementById('weight').value);
         console.log(document.getElementById('age').value);
         console.log(document.querySelector('input[name="gender"]:checked').value);

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YfCXWKn9iEVn2g3Jf1jKccyOW6L75R/sB6r+1f+/b9YOcuFiigWCHYV2NPWEVrZR/78jdAvjaGlVxgTSm7bgtA==",
+  "dgSpecHash": "SYSgWmLg6Knol401Tp2DhMi6mgvT2LDRbx4V5udJG/NhzjfmlngqNw+4vtBt8h/6oyUx2dFVp/Td10ieRXeBaA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex\\Desktop\\EV\\EV.csproj",
+  "projectFilePath": "C:\\Users\\Alex\\Documents\\GitHub\\Chicken-Feet\\EV.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.8\\microsoft.data.sqlite.core.6.0.8.nupkg.sha512",

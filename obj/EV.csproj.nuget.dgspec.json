@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alex\\Desktop\\EV\\EV.csproj": {}
+    "C:\\Users\\Alex\\Documents\\GitHub\\Chicken-Feet\\EV.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alex\\Desktop\\EV\\EV.csproj": {
+    "C:\\Users\\Alex\\Documents\\GitHub\\Chicken-Feet\\EV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alex\\Desktop\\EV\\EV.csproj",
+        "projectUniqueName": "C:\\Users\\Alex\\Documents\\GitHub\\Chicken-Feet\\EV.csproj",
         "projectName": "EV",
-        "projectPath": "C:\\Users\\Alex\\Desktop\\EV\\EV.csproj",
+        "projectPath": "C:\\Users\\Alex\\Documents\\GitHub\\Chicken-Feet\\EV.csproj",
         "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alex\\Desktop\\EV\\obj\\",
+        "outputPath": "C:\\Users\\Alex\\Documents\\GitHub\\Chicken-Feet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -169,7 +169,7 @@
       }
 
       function testform() {
-        console.log(document.getElementById('speciesType').value);
+        const fetchPromise = fetch("http://localhost:8081/api/Out").then((response) => response.text()).then((data) => console.log(data));
         console.log(document.getElementById('breed').value);
         console.log(document.getElementById('weight').value);
         console.log(document.getElementById('age').value);

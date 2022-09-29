@@ -29,34 +29,40 @@
   <body>
     <header>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white text-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
         <div class="container-fluid">
+          <!-- Toggle button -->
           <button
             class="navbar-toggler"
             type="button"
             data-mdb-toggle="collapse"
-            data-mdb-target="#navbarExample01"
-            aria-controls="navbarExample01"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <i class="fas fa-bars"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarExample01">
+      
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" href="#" style="color: white">
+            <b>PHC</b></a>
+            <!-- Left links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="index.html"
-                  >Home</a
-                >
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" style="color: white">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="form.html"
-                  >Check my pet's health</a
-                >
+                <a class="nav-link" href="form.html" style="color: white">Check your pet's health</a>
               </li>
             </ul>
+            <!-- Left links -->
           </div>
-        </div>
+          <!-- Collapsible wrapper -->
+        <!-- Container wrapper -->
       </nav>
       <!-- Navbar -->
       <!-- Background image  male, female, spade, neutered -->
@@ -140,17 +146,18 @@
         var popup = document.getElementById("myPopup");
         var facts1 = "A cat has 32 muscles in each ear, humans only have 6";
         var facts2 = "Cats spend 15-20% of their time grooming";
-        var facts3 = "A dog’s sense of smell is so precise, it could detect a teaspoon of sugar in a million gallons of water, or two Olympic-sized pools worth";
+        var facts3 =
+          "A dog’s sense of smell is so precise, it could detect a teaspoon of sugar in a million gallons of water, or two Olympic-sized pools worth";
         var randomNumber = Math.floor(Math.random() * 2);
         switch (randomNumber) {
           case 0:
             document.getElementById("myPopup").innerHTML = facts1;
             break;
           case 1:
-          document.getElementById("myPopup").innerHTML = facts2;
+            document.getElementById("myPopup").innerHTML = facts2;
             break;
           case 2:
-          document.getElementById("myPopup").innerHTML = facts3;
+            document.getElementById("myPopup").innerHTML = facts3;
             break;
         }
         popup.classList.toggle("show");

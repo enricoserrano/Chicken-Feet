@@ -75,3 +75,7 @@ body {
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+  .inactiveLink {
+    pointer-events: none !important;
+    cursor: default !important;
+ }

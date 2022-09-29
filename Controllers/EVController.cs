@@ -17,7 +17,7 @@ namespace EV.Controllers
         // GET /api/Out
         [HttpGet("Out")]
         public ActionResult Out() {
-            return Ok("String");
+            return Ok("asd");
         }
     }
 }

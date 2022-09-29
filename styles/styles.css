@@ -14,10 +14,9 @@ body {
   position: fixed;
   right: 0px;
   bottom: 0px;
-  width: 200px;
-  background-color: #1ba39c;
+  background-color: #00000000;
   padding: 5px;
-  border-radius: 0.4rem 0 0 0.4rem
+  border-radius: 0.4rem 0 0 0.4rem;
 }
 /* Popup container - can be anything you want */
 .popup {

@@ -132,9 +132,9 @@
           type="radio"
           name="gender"
           id="genderneuter"
-          value="Neuter"
+          value="Neutered"
         />
-        <label class="form-check-label" for="inlineRadio3">Neuter</label>
+        <label class="form-check-label" for="inlineRadio3">Neutered</label>
       </div>
       <div class="form-outline mb-3">
         <button type="button" class="btn btn-success" onclick="testform()">Check</button>
@@ -142,7 +142,10 @@
     </div>
     <div class="popup-align">
       <div class="popup" onclick="petFacts()">
-        <i class="bi bi-lightbulb">Pet Facts</i>
+      <div class="card">
+        <img src="./images/offlightbulb.png" alt="Light Bulb Off" width="300" height="300" background-color="faf9f6">
+          <img src="./images/onlightbulb.png" class="img-top" alt="Light Bulb On" width="300" height="300" background-color="faf9f6">
+      </div>
         <span class="popuptext" id="myPopup">A Simple Popup!</span>
       </div>
     </div>

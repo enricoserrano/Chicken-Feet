@@ -23,6 +23,13 @@ namespace EV.Controllers
             return Ok(p);
         }
 
+        // GET /api/AllBreeds
+        [HttpGet("AllBreeds")]
+        public ActionResult AllBreeds() {
+            IEnumerable<Breed> breeds = _repository.GetAllBreeds();
+            return Ok(breeds);
+        }
+
         // GET /api/BreedInfo?breed_name=
         [HttpGet("BreedInfo")]
         public ActionResult BreedInfo([Required] string breed_name) {

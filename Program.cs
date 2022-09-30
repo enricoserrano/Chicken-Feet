@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 
-// var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+using EV.Data;
+
+// var MyAllowSpecificOrigins = "TestCors";
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,34 +13,33 @@ builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// builder.Services.AddSwaggerGen();
 
 // builder.Services.AddCors(options =>
 // {
 //     options.AddPolicy(name: MyAllowSpecificOrigins,
 //                       policy  =>
 //                       {
-//                           policy.WithOrigins("http://localhost")
+//                           policy.WithOrigins("*")
 //                           .AllowAnyHeader()
 //                            .AllowAnyMethod();
 //                       });
 // });
+builder.Services.AddDbContext<EVDBContext>(
+    options => options.UseSqlite(builder.Configuration["EVAPIConnection"]));
+builder.Services.AddControllers();
+builder.Services.AddScoped<IEVRepo, EVRepo>();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
 
 app.UseHttpsRedirection();
 
 // app.UseCors(MyAllowSpecificOrigins);
 
-app.UseAuthentication();
-app.UseAuthorization();
+// app.UseAuthentication();
+// app.UseAuthorization();
 
 app.MapControllers();
 

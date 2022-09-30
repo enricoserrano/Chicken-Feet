@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/0SkSWZ+fsBIqJiXX0hqrxmlkSjC2j/VvYW2msrUIY2aUXfpdS76H35H6keaWx1vY8K57KQYigpeEirffVJ+Sg==",
+  "dgSpecHash": "w4v0jVon2E86gwHX8y4UwSJApGgGK7kZ+DboCNLNIIE2E6TmdGsJgTxZ/DqaM+wsvRvKzZ9fabtkJ7A34+3Hnw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alex\\Documents\\GitHub\\Chicken-Feet\\EV.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,9 @@
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0-rc.1.22426.10\\microsoft.win32.systemevents.7.0.0-rc.1.22426.10.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\mysqlconnector\\2.1.2\\mysqlconnector.2.1.2.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\6.0.2\\pomelo.entityframeworkcore.mysql.6.0.2.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",
@@ -36,11 +39,16 @@
     "C:\\Users\\Alex\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.3.1\\swashbuckle.aspnetcore.swaggerui.6.3.1.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0-rc.1.22426.10\\system.configuration.configurationmanager.7.0.0-rc.1.22426.10.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\system.drawing.common\\7.0.0-rc.1.22426.10\\system.drawing.common.7.0.0-rc.1.22426.10.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0-rc.1.22426.10\\system.security.cryptography.protecteddata.7.0.0-rc.1.22426.10.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\system.security.permissions\\7.0.0-rc.1.22426.10\\system.security.permissions.7.0.0-rc.1.22426.10.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\Alex\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+    "C:\\Users\\Alex\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\system.windows.extensions\\7.0.0-rc.1.22426.10\\system.windows.extensions.7.0.0-rc.1.22426.10.nupkg.sha512"
   ],
   "logs": []
 }

@@ -37,6 +37,7 @@ header {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  background: #3a38389e;
 }
 .hero_area .hero_bg_box {
   position: absolute;
@@ -228,3 +229,6 @@ img {
   text-align: center;
 }
 .sub-menu .menu-title {}
+.login-label{
+  color: white !important;
+}

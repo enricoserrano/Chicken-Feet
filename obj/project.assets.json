@@ -1865,11 +1865,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Enrico Serrano\\Documents\\Github Repositories\\Chicken-Feet\\EV.csproj",
+      "projectUniqueName": "C:\\Users\\Enrico Serrano\\Documents\\GitHub\\Chicken-Feet\\EV.csproj",
       "projectName": "EV",
-      "projectPath": "C:\\Users\\Enrico Serrano\\Documents\\Github Repositories\\Chicken-Feet\\EV.csproj",
+      "projectPath": "C:\\Users\\Enrico Serrano\\Documents\\GitHub\\Chicken-Feet\\EV.csproj",
       "packagesPath": "C:\\Users\\Enrico Serrano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Enrico Serrano\\Documents\\Github Repositories\\Chicken-Feet\\obj\\",
+      "outputPath": "C:\\Users\\Enrico Serrano\\Documents\\GitHub\\Chicken-Feet\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Enrico Serrano\\AppData\\Roaming\\NuGet\\NuGet.Config"

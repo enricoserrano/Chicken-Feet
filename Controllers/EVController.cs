@@ -42,10 +42,11 @@ namespace EV.Controllers
         [HttpGet("AllNames")]
         public ActionResult AllNames() {
             IEnumerable<Breed> breeds = _repository.GetAllBreeds();
-            List<string> names = new List<string>();
+            string names = "";
             foreach(Breed item in breeds) {
-                names.Add(item.breed_name);
+                names += item.breed_name + ",";
             }
+            names = names.Substring(0, names.Length - 1);
             return Ok(names);
         }
 

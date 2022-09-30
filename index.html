@@ -27,7 +27,7 @@
     <title>Index Page</title>
   </head>
 
-  <body>
+  <body onload="breedDropDown()">
     <!-- Background image -->
     <div class="hero_area">
       <div class="hero_bg_box">
@@ -113,17 +113,6 @@
         <div class="form-outline mb-3">
           <label for="breed">Breed Type</label>
           <select class="form-control" id="breed" onchange="setStatus()">
-            <option>Beagles</option>
-            <option>Boxers</option>
-            <option>Bullmastiff</option>
-            <option>Bloodhounds</option>
-            <option>Dalmatian</option>
-            <option>German Shepherd</option>
-            <option>Great Danes</option>
-            <option>Labrador Retriever</option>
-            <option>Pug</option>
-            <option>Rottweilers</option>
-            <option>St. Bernard</option>
           </select>
         </div>
 
@@ -259,153 +248,166 @@
     </div>
     <!-- MDB -->
     <script>
-      var runOnce = false;
+        var runOnce = false;
 
-      function randomIntFromInterval(min, max) {
-        // min and max included
-        return Math.floor(Math.random() * (max - min + 1) + min);
-      }
+        function randomIntFromInterval(min, max) {
+          // min and max included
+          return Math.floor(Math.random() * (max - min + 1) + min);
+        }
 
-      function setStatus() {
-        runOnce = true;
-      }
-      function fetchBreed() {
-        var btype = document.getElementById("breed").value;
-        const fetchBreed = fetch(
-          "http://localhost:8081/api/BreedInfo?breed_name=" + btype
-        ).then((response) => {
-          return response.json();
-        });
-      }
-      function petFacts() {
-        var btype = document.getElementById("breed").value;
-        var popup = document.getElementById("myPopup");
-
-        const fetchBreed = fetch(
-          "http://localhost:8081/api/AllFacts?breed_name=" + btype
-        )
-          .then((response) => response.text())
-          .then((data) => {
-            if (runOnce) {
-              document.getElementById("myPopup").innerHTML = data.split(",")[0];
-              runOnce = false;
-            } else {
-              document.getElementById("myPopup").innerHTML = data.split(",")[randomIntFromInterval(0, 10)];
-            }
+        function setStatus() {
+          runOnce = true;
+        }
+        function fetchBreed() {
+          var btype = document.getElementById("breed").value;
+          const fetchBreed = fetch(
+            "http://localhost:8081/api/BreedInfo?breed_name=" + btype
+          ).then((response) => {
+            return response.json();
           });
-        //.then((x) => document.getElementById("myPopup").innerHTML = x[0]);
+        }
+        function petFacts() {
+          var btype = document.getElementById("breed").value;
+          var popup = document.getElementById("myPopup");
 
-        popup.classList.toggle("show");
-      }
-      /*
-    function testform() {
-      const fetchPromise = fetch("http://localhost:8081/api/Out")
-        .then((response) => response.text())
-        .then((data) => console.log(data));
+          const fetchBreed = fetch(
+            "http://localhost:8081/api/AllFacts?breed_name=" + btype
+          )
+            .then((response) => response.text())
+            .then((data) => {
+              if (runOnce) {
+                document.getElementById("myPopup").innerHTML = data.split(",")[0];
+                runOnce = false;
+              } else {
+                document.getElementById("myPopup").innerHTML = data.split(",")[randomIntFromInterval(0, 10)];
+              }
+            });
+          //.then((x) => document.getElementById("myPopup").innerHTML = x[0]);
 
-      console.log(document.getElementById("speciesType").value);
-      console.log(document.getElementById("breed").value);
-      console.log(document.getElementById("height").value);
-      console.log(document.getElementById("weight").value);
-      console.log(document.getElementById("age").value);
-      console.log(
-        document.querySelector('input[name="gender"]:checked').value
-      );
-    }*/
-      function checkStatus() {
-        //healthy status
-        var stype = document.getElementById("speciesType").value;
-        var btype = document.getElementById("breed").value;
-        var height = document.getElementById("height").value;
-        var weight = document.getElementById("weight").value;
-        var age = document.getElementById("age").value;
-        var gender = document.querySelector(
-          'input[name="gender"]:checked'
-        ).value;
-        var addedLink =
-          "?breed=" +
-          btype +
-          "&sex=" +
-          gender +
-          "&age=" +
-          age +
-          "&weight=" +
-          weight +
-          "&height=" +
-          height;
-
-        var sandbtypeString = stype + " (" + btype + ")";
-        document.getElementById("sandbtype").innerHTML = sandbtypeString;
-
-        //predictweight
-        const fetchHealthy = fetch(
-          "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictHealthyWeight" +
-            addedLink
-        )
+          popup.classList.toggle("show");
+        }
+        /*
+      function testform() {
+        const fetchPromise = fetch("http://localhost:8081/api/Out")
           .then((response) => response.text())
-          .then(
-            (data) => (document.getElementById("hweight").innerHTML = data)
-          );
+          .then((data) => console.log(data));
 
-        //predict illness
-        const fetchIllness = fetch(
-          "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictIllness" +
-            addedLink
-        )
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("illnessbar").style.width = data + "%";
-            document.getElementById("illnessbar").innerHTML = data + "%";
-            if (parseInt(data) > 66) {
-              document
-                .getElementById("illnessbar")
-                .classList.remove("bg-success");
-              document
-                .getElementById("illnessbar")
-                .classList.remove("bg-warning");
-              document.getElementById("illnessbar").classList.add("bg-danger");
-            } else if (parseInt(data) > 33 && parseInt(data) < 66) {
-              document
-                .getElementById("illnessbar")
-                .classList.remove("bg-success");
-              document
-                .getElementById("illnessbar")
-                .classList.remove("bg-danger");
-              document.getElementById("illnessbar").classList.add("bg-warning");
-            } else if (parseInt(data) < 33) {
-              document
-                .getElementById("illnessbar")
-                .classList.remove("bg-warning");
-              document
-                .getElementById("illnessbar")
-                .classList.remove("bg-danger");
-              document.getElementById("illnessbar").classList.add("bg-success");
-            }
-          });
-        //predict behaviour
-        const fetchBehaviour = fetch(
-          "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictBehaviour" +
-            addedLink
-        )
-          .then((response) => response.text())
-          .then(
-            (data) => (document.getElementById("pbehaviour").innerHTML = data)
-          );
+        console.log(document.getElementById("speciesType").value);
+        console.log(document.getElementById("breed").value);
+        console.log(document.getElementById("height").value);
+        console.log(document.getElementById("weight").value);
+        console.log(document.getElementById("age").value);
+        console.log(
+          document.querySelector('input[name="gender"]:checked').value
+        );
+      }*/
+        function checkStatus() {
+          //healthy status
+          var stype = document.getElementById("speciesType").value;
+          var btype = document.getElementById("breed").value;
+          var height = document.getElementById("height").value;
+          var weight = document.getElementById("weight").value;
+          var age = document.getElementById("age").value;
+          var gender = document.querySelector(
+            'input[name="gender"]:checked'
+          ).value;
+          var addedLink =
+            "?breed=" +
+            btype +
+            "&sex=" +
+            gender +
+            "&age=" +
+            age +
+            "&weight=" +
+            weight +
+            "&height=" +
+            height;
 
-        //predict behaviour
-        const fetchBreed = fetch(
-          "http://localhost:8081/api/BreedInfo?breed_name=" + btype
-        )
-          .then((response) => response.json())
-          .then((data) => data.illness.split(","))
-          .then((x) => (document.getElementById("illnesses").innerHTML = x));
+          var sandbtypeString = stype + " (" + btype + ")";
+          document.getElementById("sandbtype").innerHTML = sandbtypeString;
 
-        //document.getElementById("illnessbar").element.style.backgroundColor = "red";
-        //document.getElementById("illnessbar").element.style.Color = "red";
+          //predictweight
+          const fetchHealthy = fetch(
+            "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictHealthyWeight" +
+              addedLink
+          )
+            .then((response) => response.text())
+            .then(
+              (data) => (document.getElementById("hweight").innerHTML = data)
+            );
 
-        //document.getElementById("illnessbar").classList.remove('bg-success');
-        //document.getElementById("illnessbar").classList.add('bg-danger');
-      }
+          //predict illness
+          const fetchIllness = fetch(
+            "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictIllness" +
+              addedLink
+          )
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById("illnessbar").style.width = data + "%";
+              document.getElementById("illnessbar").innerHTML = data + "%";
+              if (parseInt(data) > 66) {
+                document
+                  .getElementById("illnessbar")
+                  .classList.remove("bg-success");
+                document
+                  .getElementById("illnessbar")
+                  .classList.remove("bg-warning");
+                document.getElementById("illnessbar").classList.add("bg-danger");
+              } else if (parseInt(data) > 33 && parseInt(data) < 66) {
+                document
+                  .getElementById("illnessbar")
+                  .classList.remove("bg-success");
+                document
+                  .getElementById("illnessbar")
+                  .classList.remove("bg-danger");
+                document.getElementById("illnessbar").classList.add("bg-warning");
+              } else if (parseInt(data) < 33) {
+                document
+                  .getElementById("illnessbar")
+                  .classList.remove("bg-warning");
+                document
+                  .getElementById("illnessbar")
+                  .classList.remove("bg-danger");
+                document.getElementById("illnessbar").classList.add("bg-success");
+              }
+            });
+          //predict behaviour
+          const fetchBehaviour = fetch(
+            "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictBehaviour" +
+              addedLink
+          )
+            .then((response) => response.text())
+            .then(
+              (data) => (document.getElementById("pbehaviour").innerHTML = data)
+            );
+
+          //predict behaviour
+          const fetchBreed = fetch(
+            "http://localhost:8081/api/BreedInfo?breed_name=" + btype
+          )
+            .then((response) => response.json())
+            .then((data) => data.illness.split(","))
+            .then((x) => (document.getElementById("illnesses").innerHTML = x));
+
+          //document.getElementById("illnessbar").element.style.backgroundColor = "red";
+          //document.getElementById("illnessbar").element.style.Color = "red";
+
+          //document.getElementById("illnessbar").classList.remove('bg-success');
+          //document.getElementById("illnessbar").classList.add('bg-danger');
+        }
+
+        const breedDropDown = () => {
+          htmlString = "";
+          const data = fetch("http://localhost:8081/api/AllNames")
+            .then((response) => response.text())
+            .then((data) => {
+              var elm = data.split(",");
+              for (let i = 0; i < elm.length; i++) {
+                htmlString += `<option>${elm[i]}</option>`;
+              }
+              document.getElementById("breed").innerHTML = htmlString;
+            });
+        }
     </script>
     <!-- MDB -->
     <script

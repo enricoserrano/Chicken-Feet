@@ -53,13 +53,13 @@ namespace EV.Controllers
         [HttpGet("AllFacts")]
         public ActionResult AllFacts([Required] string breed_name) {
             IEnumerable<Breed> breeds = _repository.GetAllBreeds();
-            List<string> facts = new List<string>();
+            string facts = "";
             string breed_fact = "";
             foreach(Breed item in breeds) {
-                if (item.breed_name == breed_name) {breed_fact = item.facts;}
-                facts.Add(item.facts);
+                if (item.breed_name == breed_name) {facts = item.facts + "," + facts;}
+                else {facts += item.facts + ",";}
             }
-            facts.Insert(0, breed_fact);
+            facts = facts.Substring(0, facts.Length - 1);
             return Ok(facts);
         }
     }

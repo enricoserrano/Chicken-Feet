@@ -112,7 +112,7 @@
           <option>Labrador Retriever</option>
           <option>Pug</option>
           <option>Rottweilers</option>
-          <option>St. Bernards</option>
+          <option>St. Bernard</option>
         </select>
       </div>
 
@@ -196,10 +196,12 @@
       var btype = document.getElementById("breed").value;
       var popup = document.getElementById("myPopup");
 
-      const fetchBreed = fetch("http://localhost:8081/api/BreedInfo?breed_name=" + btype)
-        .then((response) => response.json())
-        .then((data) => data.facts.split(","))
-        .then((x) => document.getElementById("myPopup").innerHTML = x);
+      const fetchBreed = fetch("http://localhost:8081/api/AllFacts?breed_name=" + btype)
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("myPopup").innerHTML = data.split(",")[0]
+        })
+        //.then((x) => document.getElementById("myPopup").innerHTML = x[0]);
 
       popup.classList.toggle("show");
     }

@@ -19,9 +19,9 @@ Description:-
 This application is a one stop shop for pet owners. It is a powerful tool which assists pet owners determine various facts about their pets in real time. 
 The app accepts input from pet owners asking breed,gender,age,weight and height. Based on the data received, the app will then display data indicating the following:
 Healthy or overweight
-## % chances of getting chronic illnesses depeding upon breed species
-## Breed specific temperament
-## Common diseases the breed witnesses in their lifetime
+### % chances of getting chronic illnesses depeding upon breed species
+### Breed specific temperament
+### Common diseases the breed witnesses in their lifetime
 
 Working:-
 

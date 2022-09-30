@@ -232,3 +232,9 @@ img {
 .login-label{
   color: white !important;
 }
+.login-tabs {
+  color: #031e45 !important;
+}
+.form-control {
+ color: white !important;
+}

@@ -35,7 +35,7 @@ Project is created with:
 ###  HTML CSS/Bootstrap v5 
 ## Backend: 
 ## Database-
-### Sqllite Studio v3.3.3 
+### Sqllite Studio v3.3.3
 ### MYSQL Workbench v8.0 CE
 
 

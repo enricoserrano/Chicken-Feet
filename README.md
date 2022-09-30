@@ -30,14 +30,11 @@ The front end of the application is based on HTML which sends http request to C#
 Conclusion: This application leaves no stone unturned in terms of helping pet owners truly analyse their pet's breed specific details, diseases they are prone to with the % chances of getting it and a fun fact!
 ## Technologies
 Project is created with:
-*Frontend-
-  *Bootstrap v5
-  *HTML CSS
-*Backend-
-  
-*Database:
- *Sqllite Studio v3.3.3
- *MySQL Workbench v8.0 CE
+
+# header H1 Frontend- Bootstrap v5 and HTML CSS
+## header H2 Backend: 
+### header H3*Database: Sqllite Studio v3.3.3 and MYSQL Workbench v8.0 CE
+
 
 #Screenshots:
 

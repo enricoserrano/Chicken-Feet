@@ -1,235 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
-    <title>Index Page</title>
-  </head>
-  <body>
-    <!-- Background image -->
-    <div class="hero_area">
-      <div class="hero_bg_box">
-        <img src="./images/background.jpeg" alt="" />
-      </div>
-      <div class="indextitle-details">
-        <h6 class="mb-3 title-main">Pet Health App</h6>
-        <div class="fade-in-effect">
-          <h2 class="mb-3">
-            A quick way to check your pet's health
-          </h2>
-        </div>
-        <div class="text-white">
-          <a class="btn btn-outline-light btn-lg" href="#form-div" role="button"
-            >Check my pet's health</a
-          >
-        </div>
-      </div>
-    </div>
-    <div id="form-div">
-    <div class="mb-2">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+  <title>Index Page</title>
+</head>
+
+<body>
+  <!-- Background image -->
+  <div class="hero_area">
+    <div class="hero_bg_box">
+      <img src="./images/background.jpeg" alt="" />
     </div>
+    <div class="indextitle-details">
+      <h6 class="mb-3 title-main">Pet Health App</h6>
+      <div class="fade-in-effect">
+        <h2 class="mb-3">
+          A quick way to check your pet's health
+        </h2>
+      </div>
+      <div class="text-white">
+        <a class="btn btn-outline-light btn-lg" href="#form-div" role="button">Check my pet's health</a>
+      </div>
+    </div>
+  </div>
+  <div id="form-div">
     <div class="mb-3">
       <div class="main-section">
         <h1>Pet Health Checker</h1>
-     </div>
+      </div>
     </div>
     <div class="form-class">
       <div class="form-outline mb-3">
-        <input type="text" id="speciesType" class="form-control" required/>
+        <input type="text" id="speciesType" class="form-control" required />
         <label class="form-label" for="speciesType">Species Type</label>
       </div>
 
       <div class="form-outline mb-3">
-        <input type="text" id="height" class="form-control" required/>
+        <input type="text" id="height" class="form-control" required />
         <label class="form-label" for="height">Height</label>
       </div>
 
       <div class="form-outline mb-3">
-        <input type="text" id="weight" class="form-control" required/>
+        <input type="text" id="weight" class="form-control" required />
         <label class="form-label" for="weight">Weight</label>
       </div>
 
       <div class="form-outline mb-3">
-        <input type="number" id="age" class="form-control" required/>
+        <input type="number" id="age" class="form-control" required />
         <label class="form-label" for="age">Age</label>
       </div>
 
       <div class="form-outline mb-3">
         <label for="breed">Breed Type</label>
         <select class="form-control" id="breed">
-           <option>Beagles</option>
-           <option>Boxers</option>
-           <option>Bull Mastiff</option>
-           <option>Bloodhounds</option>
-           <option>Dalmatian</option>
-           <option>German Shepherd</option>
-           <option>Great Danes</option>
-           <option>Labrador Retriever</option>
-           <option>Pug</option>
-           <option>Rottweilers</option>
-           <option>St. Bernards</option>
+          <option>Beagles</option>
+          <option>Boxers</option>
+          <option>Bullmastiff</option>
+          <option>Bloodhounds</option>
+          <option>Dalmatian</option>
+          <option>German Shepherd</option>
+          <option>Great Danes</option>
+          <option>Labrador Retriever</option>
+          <option>Pug</option>
+          <option>Rottweilers</option>
+          <option>St. Bernards</option>
         </select>
-     </div>
+      </div>
 
       <div class="form-outline mb-3">
-      <div class="form-check form-check-inline">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="gender"
-          id="gendermale"
-          value="Male"
-          required
-        />
-        <label class="form-check-label" for="inlineRadio1">Male</label>
-      </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="gendermale" value="Male" required />
+          <label class="form-check-label" for="inlineRadio1">Male</label>
+        </div>
 
-      <div class="form-check form-check-inline">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="gender"
-          id="genderfemale"
-          value="Female"
-        />
-        <label class="form-check-label" for="inlineRadio2">Female</label>
-      </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="genderfemale" value="Female" />
+          <label class="form-check-label" for="inlineRadio2">Female</label>
+        </div>
 
-      <div class="form-check form-check-inline">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="gender"
-          id="genderspayed"
-          value="Spayed"
-        />
-        <label class="form-check-label" for="inlineRadio3">Spayed</label>
-      </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="genderspayed" value="Spayed" />
+          <label class="form-check-label" for="inlineRadio3">Spayed</label>
+        </div>
 
-      <div class="form-check form-check-inline">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="gender"
-          id="genderneuter"
-          value="Neutered"
-        />
-        <label class="form-check-label" for="inlineRadio3">Neutered</label>
-      </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="genderneuter" value="Neutered" />
+          <label class="form-check-label" for="inlineRadio3">Neutered</label>
+        </div>
       </div>
       <div class="form-outline mb-3">
         <button type="button" class="btn btn-success" onclick="checkStatus()">Check</button>
       </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <p id="hweight"></p>
-    <p id="pillness"></p>
-    <p id="pbehaviour"></p>
-    <p id="illnesses"></p>
+    <section class="vh-20" style="background-color: #faf9f6;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-md-12 col-xl-4">
+
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body text-center">
+                <div class="mt-3 mb-4">
+                  <img src="./images/dogprofile.png"
+                    class="rounded-circle img-fluid" style="width: 100px;" />
+                </div>
+                <h4 class="mb-2" id="sandbtype"></h4>
+                <p class="text-muted mb-4"><i class="bi bi-badge-wc-fill"></i> Weight Status: <a id="hweight"></a></p>
+                <p class="text-muted mb-4"><i class="bi bi-exclamation-square-fill"></i> Things to look out for based on selected breed:<span class="mx-6"></span> <b><p id="illnesses"></p></b></p>
+                <p class="text-muted mb-4"><i class="bi bi-emoji-smile-fill"></i> Breed's Temperment:<span class="mx-6"></span> <b><p id="pbehaviour"></p></b></p>
+                <p class="text-muted mb-4"><i class="bi bi-activity"></i> Chance of getting chronic illness in its lifespan:<span class="mx-6"></span> <b></b></p>
+                <div class="progress" style="height: 20px;">
+                  <div class="progress-bar bg-success" id="illnessbar"role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="popup-align">
       <div class="popup" onclick="petFacts()">
-      <div class="card">
-        <img src="./images/offlightbulb.png" alt="Light Bulb Off" background-color="faf9f6" class="offimage">
+        <div class="card">
+          <img src="./images/offlightbulb.png" alt="Light Bulb Off" background-color="faf9f6" class="offimage">
           <img src="./images/onlightbulb.png" class="img-top onimage" alt="Light Bulb On" background-color="faf9f6">
-      </div>
+        </div>
         <span class="popuptext" id="myPopup">A Simple Popup!</span>
       </div>
     </div>
   </div>
-    <!-- MDB -->
-    <script>
+  <!-- MDB -->
+  <script>
 
-      function fetchBreed() {
-        var btype = document.getElementById("breed").value;
-        const fetchBreed = fetch("http://localhost:8081/api/BreedInfo?breed_name=" + btype)
-        .then((response) => {return response.json()})
-      }
-      function petFacts() {
-        var btype = document.getElementById("breed").value;
-        var popup = document.getElementById("myPopup");
+    function fetchBreed() {
+      var btype = document.getElementById("breed").value;
+      const fetchBreed = fetch("http://localhost:8081/api/BreedInfo?breed_name=" + btype)
+        .then((response) => { return response.json() })
+    }
+    function petFacts() {
+      var btype = document.getElementById("breed").value;
+      var popup = document.getElementById("myPopup");
 
-        const fetchBreed = fetch("http://localhost:8081/api/BreedInfo?breed_name=" + btype)
+      const fetchBreed = fetch("http://localhost:8081/api/BreedInfo?breed_name=" + btype)
         .then((response) => response.json())
         .then((data) => data.facts.split(","))
         .then((x) => document.getElementById("myPopup").innerHTML = x);
 
-        popup.classList.toggle("show");
-      }
-      /*
-      function testform() {
-        const fetchPromise = fetch("http://localhost:8081/api/Out")
-          .then((response) => response.text())
-          .then((data) => console.log(data));
+      popup.classList.toggle("show");
+    }
+    /*
+    function testform() {
+      const fetchPromise = fetch("http://localhost:8081/api/Out")
+        .then((response) => response.text())
+        .then((data) => console.log(data));
 
-        console.log(document.getElementById("speciesType").value);
-        console.log(document.getElementById("breed").value);
-        console.log(document.getElementById("height").value);
-        console.log(document.getElementById("weight").value);
-        console.log(document.getElementById("age").value);
-        console.log(
-          document.querySelector('input[name="gender"]:checked').value
-        );
-      }*/
-      function checkStatus() {
-        //healthy status
-        var stype = document.getElementById("speciesType").value;
-        var btype = document.getElementById("breed").value;
-        var height = document.getElementById("height").value;
-        var weight = document.getElementById("weight").value;
-        var age = document.getElementById("age").value;
-        var gender = document.querySelector('input[name="gender"]:checked').value;
-        var addedLink = "?breed=" + btype + "&sex=" + gender + "&age=" + age + "&weight=" + weight + "&height=" + height;
+      console.log(document.getElementById("speciesType").value);
+      console.log(document.getElementById("breed").value);
+      console.log(document.getElementById("height").value);
+      console.log(document.getElementById("weight").value);
+      console.log(document.getElementById("age").value);
+      console.log(
+        document.querySelector('input[name="gender"]:checked').value
+      );
+    }*/
+    function checkStatus() {
+      //healthy status
+      var stype = document.getElementById("speciesType").value;
+      var btype = document.getElementById("breed").value;
+      var height = document.getElementById("height").value;
+      var weight = document.getElementById("weight").value;
+      var age = document.getElementById("age").value;
+      var gender = document.querySelector('input[name="gender"]:checked').value;
+      var addedLink = "?breed=" + btype + "&sex=" + gender + "&age=" + age + "&weight=" + weight + "&height=" + height;
 
-        //predictweight
-        const fetchHealthy = fetch("https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictHealthyWeight" + addedLink)
-          .then((response) => response.text())
-          .then((data) => document.getElementById("hweight").innerHTML = data);
+      var sandbtypeString = stype + " (" + btype + ")"; 
+      document.getElementById("sandbtype").innerHTML = sandbtypeString;
 
-        //predict illness
-        const fetchIllness = fetch("https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictIllness" + addedLink)
-          .then((response) => response.text())
-          .then((data) => document.getElementById("pillness").innerHTML = data);
-        //predict behaviour
-        const fetchBehaviour = fetch("https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictBehaviour" + addedLink)
+      //predictweight
+      const fetchHealthy = fetch("https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictHealthyWeight" + addedLink)
+        .then((response) => response.text())
+        .then((data) => document.getElementById("hweight").innerHTML = data);
+
+      //predict illness
+      const fetchIllness = fetch("https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictIllness" + addedLink)
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("illnessbar").style.width = data + "%";
+          document.getElementById("illnessbar").innerHTML = data + "%";
+          if(parseInt(data) > 66 ) {
+            document.getElementById("illnessbar").classList.remove('bg-success');
+            document.getElementById("illnessbar").classList.remove('bg-warning');
+            document.getElementById("illnessbar").classList.add('bg-danger');
+          } else if (parseInt(data) > 33 && parseInt(data) < 66){
+            document.getElementById("illnessbar").classList.remove('bg-success');
+            document.getElementById("illnessbar").classList.remove('bg-danger');
+            document.getElementById("illnessbar").classList.add('bg-warning');
+          } else if (parseInt(data) < 33) {
+            document.getElementById("illnessbar").classList.remove('bg-warning');
+            document.getElementById("illnessbar").classList.remove('bg-danger');
+            document.getElementById("illnessbar").classList.add('bg-success');
+          }
+        });
+      //predict behaviour
+      const fetchBehaviour = fetch("https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictBehaviour" + addedLink)
         .then((response) => response.text())
         .then((data) => document.getElementById("pbehaviour").innerHTML = data);
 
-        //predict behaviour
-        const fetchBreed = fetch("http://localhost:8081/api/BreedInfo?breed_name=" + btype)
+      //predict behaviour
+      const fetchBreed = fetch("http://localhost:8081/api/BreedInfo?breed_name=" + btype)
         .then((response) => response.json())
         .then((data) => data.illness.split(","))
         .then((x) => document.getElementById("illnesses").innerHTML = x);
 
-      }
-    </script>
-    <!-- MDB -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
-    ></script>
-  </body>
+      //document.getElementById("illnessbar").element.style.backgroundColor = "red";
+      //document.getElementById("illnessbar").element.style.Color = "red";
+
+      //document.getElementById("illnessbar").classList.remove('bg-success');
+      //document.getElementById("illnessbar").classList.add('bg-danger');
+    }
+  </script>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+</body>
+
 </html>

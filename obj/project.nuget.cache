@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fJDqKzwocPlEdibXb41CYFybbu/yqGlke90TY1eq80LWTmwXo5adc37xTkYqgGCGkomITCs5BABXbbw8fsMSaA==",
+  "dgSpecHash": "0AzgxcJWaYNf0HXo16CgwLV6QuVME5uot6zgTo8wBZwJ3L+vP+MeZ5xCdgfzyMYQw4GoUl2mRIJXq5Qw8sLf7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Enrico Serrano\\Documents\\GitHub\\Chicken-Feet\\EV.csproj",
+  "projectFilePath": "C:\\Users\\Enrico Serrano\\Documents\\Github Repositories\\Chicken-Feet\\EV.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Enrico Serrano\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Enrico Serrano\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.8\\microsoft.data.sqlite.core.6.0.8.nupkg.sha512",

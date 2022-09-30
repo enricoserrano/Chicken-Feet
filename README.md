@@ -4,9 +4,9 @@ This is the repository of the group 'Chicken Feet' for ezyVet hackathon
 
 <img src="https://redhousespice.com/wp-content/uploads/2022/04/classic-chicken-feet-dish-scaled.jpg" width="35%" height="35%"/>
 
-Pet Health Checker
+Project Name: Pet Health Checker
 
-Aim- To help pet owners assess the health of the pet anytime anywhere just a click away
+Aim- To help pet owners assess the health of their pets anytime anywhere just a click away
 
 Description:-
 
@@ -24,4 +24,8 @@ The front end of the application is based on HTML which sends http request to C#
 ![HackathonProject drawio_1](https://user-images.githubusercontent.com/114555574/193238328-178e9c05-17e2-477f-b7ec-dbed9a5b8537.png)
 
 [EndPointDocumentation.pdf](https://github.com/enricoserrano/Chicken-Feet/files/9682683/EndPointDocumentation.pdf)
+![1](https://user-images.githubusercontent.com/114555574/193251504-d8d9acf3-b65c-49fe-9dcb-13a71796d0f3.png)
+
+Conclusion: This application leaves no stone unturned in terms of helping pet owners truly analyse their pet's breed specific details, diseases they are prone to with the % chances of getting it and a fun fact!
+
 [database.zip](https://github.com/enricoserrano/Chicken-Feet/files/9682788/database.zip)

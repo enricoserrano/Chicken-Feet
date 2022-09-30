@@ -6,6 +6,13 @@ This is the repository of the group 'Chicken Feet' for ezyVet hackathon
 
 Project Name: Pet Health Checker
 
+
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+
+## General info
 Aim- To help pet owners assess the health of their pets anytime anywhere just a click away
 
 Description:-
@@ -21,11 +28,29 @@ Working:-
 
 The front end of the application is based on HTML which sends http request to C# RestAPI which in turn queries MySQL Database to retrieve data and stores it in Machine Learning Classification Model and then API calls are made back to C# RestAPI. Lastly, C# RestAPI returns results of request. 
 
+Conclusion: This application leaves no stone unturned in terms of helping pet owners truly analyse their pet's breed specific details, diseases they are prone to with the % chances of getting it and a fun fact!
+
+#Screenshots:
+
 ![HackathonProject drawio_1](https://user-images.githubusercontent.com/114555574/193238328-178e9c05-17e2-477f-b7ec-dbed9a5b8537.png)
+
+	
+## Technologies
+Project is created with:
+*Frontend
+  Bootstrap v5
+  HTML CSS
+*Backend
+  
+*Database:
+  Sqllite Studio v3.3.3
+  MySQL Workbench v8.0 CE
+
+
 
 [EndPointDocumentation.pdf](https://github.com/enricoserrano/Chicken-Feet/files/9682683/EndPointDocumentation.pdf)
 
 
-Conclusion: This application leaves no stone unturned in terms of helping pet owners truly analyse their pet's breed specific details, diseases they are prone to with the % chances of getting it and a fun fact!
+
 
 [database.zip](https://github.com/enricoserrano/Chicken-Feet/files/9682788/database.zip)

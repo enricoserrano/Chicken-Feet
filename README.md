@@ -11,7 +11,7 @@ Project Name: Pet Health Checker
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Screenshots](#screeshots)
-## header General info
+## General info
 Aim- To help pet owners assess the health of their pets anytime anywhere just a click away
 
 Description:-
@@ -28,12 +28,16 @@ Working:-
 The front end of the application is based on HTML which sends http request to C# RestAPI which in turn queries MySQL Database to retrieve data and stores it in Machine Learning Classification Model and then API calls are made back to C# RestAPI. Lastly, C# RestAPI returns results of request. 
 
 Conclusion: This application leaves no stone unturned in terms of helping pet owners truly analyse their pet's breed specific details, diseases they are prone to with the % chances of getting it and a fun fact!
-## header Technologies
+## Technologies
 Project is created with:
 
-# header   Frontend- Bootstrap v5 and HTML CSS
-## header  Backend: 
-### header Database- Sqllite Studio v3.3.3 and MYSQL Workbench v8.0 CE
+## Frontend-
+###  Bootstrap v5 
+###  HTML CSS
+## Backend: 
+## Database-
+### Sqllite Studio v3.3.3 
+### MYSQL Workbench v8.0 CE
 
 
 ## header Screenshots:

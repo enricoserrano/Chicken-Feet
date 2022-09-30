@@ -56,7 +56,6 @@
      </div>
     </div>
     <div class="form-class">
-      <form>
       <div class="form-outline mb-3">
         <input type="text" id="speciesType" class="form-control" required/>
         <label class="form-label" for="speciesType">Species Type</label>
@@ -143,14 +142,13 @@
       <div class="form-outline mb-3">
         <button type="button" class="btn btn-success" onclick="testform()">Check</button>
       </div>
-      <input type="submit">
-    </form>
     </div>
     <br>
     <br>
     <br>
-    <br>
-    <br>
+    <p id="hweight"></p>
+    <p id="pillness"></p>
+    <p id="pbehaviour"></p>
     <div class="popup-align">
       <div class="popup" onclick="petFacts()">
       <div class="card">
@@ -183,7 +181,7 @@
         }
         popup.classList.toggle("show");
       }
-
+      /*
       function testform() {
         const fetchPromise = fetch("http://localhost:8081/api/Out")
           .then((response) => response.text())
@@ -197,6 +195,30 @@
         console.log(
           document.querySelector('input[name="gender"]:checked').value
         );
+      }*/
+      function testform() {
+        //healthy status
+        var stype = document.getElementById("speciesType").value;
+        var btype = document.getElementById("breed").value;
+        var height = document.getElementById("height").value;
+        var weight = document.getElementById("weight").value;
+        var age = document.getElementById("age").value;
+        var gender = document.querySelector('input[name="gender"]:checked').value;
+        var addedLink = "?breed=" + btype + "&sex=" + gender + "&age=" + age + "&weight=" + weight + "&height=" + height;
+
+        //predictweight
+        const fetchHealthy = fetch("https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictHealthyWeight" + addedLink)
+          .then((response) => response.text())
+          .then((data) => document.getElementById("hweight").innerHTML = data);
+
+        //predict illness
+        const fetchIllness = fetch("https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictIllness" + addedLink)
+          .then((response) => response.text())
+          .then((data) => document.getElementById("pillness").innerHTML = data);
+        //predict behaviour
+        const fetchBehaviour = fetch("https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictBehaviour" + addedLink)
+        .then((response) => response.text())
+        .then((data) => document.getElementById("pbehaviour").innerHTML = data);
       }
     </script>
     <!-- MDB -->

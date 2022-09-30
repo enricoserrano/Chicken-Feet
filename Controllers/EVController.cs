@@ -37,5 +37,30 @@ namespace EV.Controllers
             if (breed != null) {return Ok(breed);};
             return NotFound("Not in DB");
         }
+
+        // GET /api/AllNames
+        [HttpGet("AllNames")]
+        public ActionResult AllNames() {
+            IEnumerable<Breed> breeds = _repository.GetAllBreeds();
+            List<string> names = new List<string>();
+            foreach(Breed item in breeds) {
+                names.Add(item.breed_name);
+            }
+            return Ok(names);
+        }
+
+        // GET /api/AllFacts?breed_name=
+        [HttpGet("AllFacts")]
+        public ActionResult AllFacts([Required] string breed_name) {
+            IEnumerable<Breed> breeds = _repository.GetAllBreeds();
+            List<string> facts = new List<string>();
+            string breed_fact = "";
+            foreach(Breed item in breeds) {
+                if (item.breed_name == breed_name) {breed_fact = item.facts;}
+                facts.Add(item.facts);
+            }
+            facts.Insert(0, breed_fact);
+            return Ok(facts);
+        }
     }
 }

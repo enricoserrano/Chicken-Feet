@@ -40,7 +40,7 @@ Project is created with:
 ### MYSQL Workbench v8.0 CE
 
 
-## header Screenshots:
+## Screenshots:
 
 ![HackathonProject drawio_1](https://user-images.githubusercontent.com/114555574/193238328-178e9c05-17e2-477f-b7ec-dbed9a5b8537.png)
 

@@ -233,8 +233,22 @@ img {
   color: white !important;
 }
 .login-tabs {
-  color: #031e45 !important;
+  color: #2269cc !important;
 }
 .login-labels {
  color: white !important;
+}
+.centered {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+.lcard {
+  display: inline-block;
+  box-shadow: none !important;
+  background-color: #ffffff00;
+  width: 90%;
+  height: 70%;
 }

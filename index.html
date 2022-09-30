@@ -86,7 +86,7 @@
            <option>Dalmatian</option>
            <option>German Shepherd</option>
            <option>Great Danes</option>
-           <option>Labrador</option>
+           <option>Labrador Retriever</option>
            <option>Pug</option>
            <option>Rottweilers</option>
            <option>St. Bernards</option>
@@ -140,7 +140,7 @@
       </div>
       </div>
       <div class="form-outline mb-3">
-        <button type="button" class="btn btn-success" onclick="testform()">Check</button>
+        <button type="button" class="btn btn-success" onclick="checkStatus()">Check</button>
       </div>
     </div>
     <br>
@@ -149,6 +149,7 @@
     <p id="hweight"></p>
     <p id="pillness"></p>
     <p id="pbehaviour"></p>
+    <p id="illnesses"></p>
     <div class="popup-align">
       <div class="popup" onclick="petFacts()">
       <div class="card">
@@ -161,24 +162,21 @@
   </div>
     <!-- MDB -->
     <script>
+
+      function fetchBreed() {
+        var btype = document.getElementById("breed").value;
+        const fetchBreed = fetch("http://localhost:8081/api/BreedInfo?breed_name=" + btype)
+        .then((response) => {return response.json()})
+      }
       function petFacts() {
+        var btype = document.getElementById("breed").value;
         var popup = document.getElementById("myPopup");
-        var facts1 = "A cat has 32 muscles in each ear, humans only have 6";
-        var facts2 = "Cats spend 15-20% of their time grooming";
-        var facts3 =
-          "A dog’s sense of smell is so precise, it could detect a teaspoon of sugar in a million gallons of water, or two Olympic-sized pools worth";
-        var randomNumber = Math.floor(Math.random() * 2);
-        switch (randomNumber) {
-          case 0:
-            document.getElementById("myPopup").innerHTML = facts1;
-            break;
-          case 1:
-            document.getElementById("myPopup").innerHTML = facts2;
-            break;
-          case 2:
-            document.getElementById("myPopup").innerHTML = facts3;
-            break;
-        }
+
+        const fetchBreed = fetch("http://localhost:8081/api/BreedInfo?breed_name=" + btype)
+        .then((response) => response.json())
+        .then((data) => data.facts.split(","))
+        .then((x) => document.getElementById("myPopup").innerHTML = x);
+
         popup.classList.toggle("show");
       }
       /*
@@ -196,7 +194,7 @@
           document.querySelector('input[name="gender"]:checked').value
         );
       }*/
-      function testform() {
+      function checkStatus() {
         //healthy status
         var stype = document.getElementById("speciesType").value;
         var btype = document.getElementById("breed").value;
@@ -219,6 +217,13 @@
         const fetchBehaviour = fetch("https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictBehaviour" + addedLink)
         .then((response) => response.text())
         .then((data) => document.getElementById("pbehaviour").innerHTML = data);
+
+        //predict behaviour
+        const fetchBreed = fetch("http://localhost:8081/api/BreedInfo?breed_name=" + btype)
+        .then((response) => response.json())
+        .then((data) => data.illness.split(","))
+        .then((x) => document.getElementById("illnesses").innerHTML = x);
+
       }
     </script>
     <!-- MDB -->

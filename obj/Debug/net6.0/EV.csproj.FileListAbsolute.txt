@@ -117,7 +117,6 @@ C:\Users\Alex\Documents\GitHub\Chicken-Feet\obj\Debug\net6.0\scopedcss\bundle\EV
 C:\Users\Alex\Documents\GitHub\Chicken-Feet\obj\Debug\net6.0\EV.csproj.CopyComplete
 C:\Users\Alex\Documents\GitHub\Chicken-Feet\obj\Debug\net6.0\EV.genruntimeconfig.cache
 C:\Users\Alex\Documents\GitHub\Chicken-Feet\obj\Debug\net6.0\ref\EV.dll
-C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\appsettings.json
 C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\EV.exe
 C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\EV.deps.json
@@ -171,3 +170,15 @@ C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\obj\Debug\net6.0\refint\EV
 C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\obj\Debug\net6.0\EV.pdb
 C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\obj\Debug\net6.0\EV.genruntimeconfig.cache
 C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\obj\Debug\net6.0\ref\EV.dll
+C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Enrico Serrano\Documents\GitHub\Chicken-Feet\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

@@ -192,3 +192,17 @@ header {
 img {
   background: #ffffff00;
 }
+.main-section {
+  padding: 15px;
+  text-align: center;
+  background-color: #031e45;
+  color: rgb(255, 255, 255);
+}
+.onimage {
+  width: 300px;
+  height: 300px;
+}
+.offimage{
+  width: 300px;
+  height: 300px;
+}

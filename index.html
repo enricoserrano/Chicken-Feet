@@ -22,6 +22,44 @@
     <div class="hero_bg_box">
       <img src="./images/background.jpeg" alt="" />
     </div>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li>
+                <a href="index.html">
+                  <div class="sub-menu">
+                    <i class="bi bi-house-door"></i>
+                    <p class="menu-title">Home</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="login.html">
+                  <div class="sub-menu">
+                    <i class="bi bi-person-circle"></i>
+                    <p class="menu-title">Login</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="manage.html">
+                  <div class="sub-menu">
+                    <i class="bi bi-book"></i>
+                    <p class="menu-title">Manage</p>
+                  </div>
+                </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </nav>
+      <!-- Navbar -->
+    </header>
+    <!-- Navbar -->
+
     <div class="indextitle-details">
       <h6 class="mb-3 title-main">Pet Health App</h6>
       <div class="fade-in-effect">
@@ -111,16 +149,23 @@
             <div class="card" style="border-radius: 15px;">
               <div class="card-body text-center">
                 <div class="mt-3 mb-4">
-                  <img src="./images/dogprofile.png"
-                    class="rounded-circle img-fluid" style="width: 100px;" />
+                  <img src="./images/dogprofile.png" class="rounded-circle img-fluid" style="width: 100px;" />
                 </div>
                 <h4 class="mb-2" id="sandbtype"></h4>
                 <p class="text-muted mb-4"><i class="bi bi-badge-wc-fill"></i> Weight Status: <a id="hweight"></a></p>
-                <p class="text-muted mb-4"><i class="bi bi-exclamation-square-fill"></i> Things to look out for based on selected breed:<span class="mx-6"></span> <b><p id="illnesses"></p></b></p>
-                <p class="text-muted mb-4"><i class="bi bi-emoji-smile-fill"></i> Breed's Temperment:<span class="mx-6"></span> <b><p id="pbehaviour"></p></b></p>
-                <p class="text-muted mb-4"><i class="bi bi-activity"></i> Chance of getting chronic illness in its lifespan:<span class="mx-6"></span> <b></b></p>
+                <p class="text-muted mb-4"><i class="bi bi-exclamation-square-fill"></i> Things to look out for based on
+                  selected breed:<span class="mx-6"></span> <b>
+                    <p id="illnesses"></p>
+                  </b></p>
+                <p class="text-muted mb-4"><i class="bi bi-emoji-smile-fill"></i> Breed's Temperment:<span
+                    class="mx-6"></span> <b>
+                    <p id="pbehaviour"></p>
+                  </b></p>
+                <p class="text-muted mb-4"><i class="bi bi-activity"></i> Chance of getting chronic illness in its
+                  lifespan:<span class="mx-6"></span> <b></b></p>
                 <div class="progress" style="height: 20px;">
-                  <div class="progress-bar bg-success" id="illnessbar"role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+                  <div class="progress-bar bg-success" id="illnessbar" role="progressbar" style="width: 0%;"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
                 </div>
               </div>
             </div>
@@ -183,7 +228,7 @@
       var gender = document.querySelector('input[name="gender"]:checked').value;
       var addedLink = "?breed=" + btype + "&sex=" + gender + "&age=" + age + "&weight=" + weight + "&height=" + height;
 
-      var sandbtypeString = stype + " (" + btype + ")"; 
+      var sandbtypeString = stype + " (" + btype + ")";
       document.getElementById("sandbtype").innerHTML = sandbtypeString;
 
       //predictweight
@@ -197,11 +242,11 @@
         .then((data) => {
           document.getElementById("illnessbar").style.width = data + "%";
           document.getElementById("illnessbar").innerHTML = data + "%";
-          if(parseInt(data) > 66 ) {
+          if (parseInt(data) > 66) {
             document.getElementById("illnessbar").classList.remove('bg-success');
             document.getElementById("illnessbar").classList.remove('bg-warning');
             document.getElementById("illnessbar").classList.add('bg-danger');
-          } else if (parseInt(data) > 33 && parseInt(data) < 66){
+          } else if (parseInt(data) > 33 && parseInt(data) < 66) {
             document.getElementById("illnessbar").classList.remove('bg-success');
             document.getElementById("illnessbar").classList.remove('bg-danger');
             document.getElementById("illnessbar").classList.add('bg-warning');

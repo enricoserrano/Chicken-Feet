@@ -32,7 +32,7 @@ Conclusion: This application leaves no stone unturned in terms of helping pet ow
 Project is created with:
 
 ## Frontend-
-###  HTML CSS/Bootstrap v5 
+###  HTML/CSS/Bootstrap v5 
 ## Backend: 
 ## Database-
 ### Sqllite Studio v3.3.3

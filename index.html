@@ -54,23 +54,24 @@
       <h1>Pet Health Checker</h1>
     </div>
     <div class="form-class">
+      <form>
       <div class="form-outline mb-3">
-        <input type="text" id="speciesType" class="form-control" />
+        <input type="text" id="speciesType" class="form-control" required/>
         <label class="form-label" for="speciesType">Species Type</label>
       </div>
 
       <div class="form-outline mb-3">
-        <input type="text" id="height" class="form-control" />
+        <input type="text" id="height" class="form-control" required/>
         <label class="form-label" for="height">Height</label>
       </div>
 
       <div class="form-outline mb-3">
-        <input type="text" id="weight" class="form-control" />
+        <input type="text" id="weight" class="form-control" required/>
         <label class="form-label" for="weight">Weight</label>
       </div>
 
       <div class="form-outline mb-3">
-        <input type="text" id="age" class="form-control" />
+        <input type="number" id="age" class="form-control" required/>
         <label class="form-label" for="age">Age</label>
       </div>
 
@@ -99,6 +100,7 @@
           name="gender"
           id="gendermale"
           value="Male"
+          required
         />
         <label class="form-check-label" for="inlineRadio1">Male</label>
       </div>
@@ -139,6 +141,8 @@
       <div class="form-outline mb-3">
         <button type="button" class="btn btn-success" onclick="testform()">Check</button>
       </div>
+      <input type="submit">
+    </form>
     </div>
     <br>
     <br>

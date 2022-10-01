@@ -1,22 +1,117 @@
 body {
   background-color: #faf9f6;
   text-align: center;
-  color: black !important;
+  height: 100%;
+  margin: 0;
 }
-.navbar {
-  background-color: #122145 !important;
+html {
+  box-sizing: border-box;
 }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*homepage styling */
+.fade-in-effect { 
+  animation: fadeIn 7s; 
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.title-main {
+  font-size:calc(40px + 9vw);
+}
+header {
+  display: block;
+  z-index: 1;
+}
+.hero_area {
+  position: relative;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #3a38389e;
+}
+.hero_area .hero_bg_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.hero_area .hero_bg_box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: right top;
+  object-position: right top;
+}
+.hero_area .hero_bg_box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(14, 55, 70, 0.9)), to(rgba(14, 55, 70, 0.15)));
+  background: linear-gradient(to right, rgba(14, 55, 70, 0.9), rgba(14, 55, 70, 0.15));
+}
+.sub_page .hero_area {
+  min-height: auto;
+}
+.indextitle-details{
+  color: white;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.navbarlogo-text{
+  font-family: Verdana, sans-serif;
+}
+.navbarlogo-text a {
+  color: #000000;
+  text-decoration: none;
+}
+.container-fluid {
+  display: flex;
+  padding: 0px;
+  flex-direction: column;
+}
+.navigation-wrapper {
+  overflow:auto !important;
+}
+.navigation-buttons {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+.navigation-logo {
+  float: left !important;
+}
+
 .form-class {
   width: 30%;
   display: inline-block;
 }
 .popup-align {
   position: fixed;
-  right: 0px;
-  bottom: 0px;
-  width: 200px;
-  background-color: #1ba39c;
+  right: -2px;
+  bottom: -5px;
+  background-color: #00000000;
   padding: 5px;
+  border-radius: 0.4rem 0 0 0.4rem;
 }
 /* Popup container - can be anything you want */
 .popup {
@@ -40,11 +135,10 @@ body {
     padding: 8px 0;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
+    bottom: 110%;
     left: 50%;
     margin-left: -80px;
   }
-  
   /* Popup arrow */
   .popup .popuptext::after {
     content: "";
@@ -74,3 +168,87 @@ body {
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+  .inactiveLink {
+    pointer-events: none !important;
+    cursor: default !important;
+ }
+
+ .card {
+  position: relative;
+  display: inline-block;
+  box-shadow: none !important;
+  background-color: #ffffff00;
+}
+.card .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.card:hover .img-top {
+  display: inline;
+}
+
+img {
+  background: #ffffff00;
+}
+.main-section {
+  padding: 15px;
+  text-align: center;
+  background-color: #031e45;
+  color: rgb(255, 255, 255);
+}
+.onimage {
+  width: 300px;
+  height: 300px;
+}
+.offimage{
+  width: 300px;
+  height: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .onimage {
+    width: 100px;
+    height: 100px;
+  }
+  .offimage{
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  padding-top: 5px;
+  color: black;
+  text-align: center;
+}
+.sub-menu .menu-title {}
+.login-label{
+  color: white !important;
+}
+.login-tabs {
+  color: #2269cc !important;
+}
+.login-labels {
+ color: white !important;
+}
+.centered {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+.lcard {
+  display: inline-block;
+  box-shadow: none !important;
+  background-color: #ffffff00;
+  width: 90%;
+  height: 70%;
+}

@@ -20,6 +20,17 @@ This application is a one stop shop for pet owners. It is a powerful tool which 
 The app accepts input from pet owners asking breed,gender,age,weight and height. Based on the data received, the app will then display data indicating the following:
 Healthy or overweight, % chances of getting chronic illnesses depeding upon breed species,breed specific temperament and common diseases the breed witnesses in their lifetime
 
+## Extensions Requirement
+1. You need to install .net environment which can be found here (https://dotnet.microsoft.com/en-us/download)
+2. You need to have a CORS extension installed in your search engine eg. google, brave, it can be found here (https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en)
+3. You need to have visual studio live server extension
+## Installation
+1. Download the source folder from our github repository (https://github.com/enricoserrano/Chicken-Feet)
+2. Open command with path from source folder and type 'dotnet run'
+3. Open the cors extension app
+4. Open the index.html with the live server extension
+5. The application should now function
+
 Working:-
 
 The front end of the application is based on HTML which sends http request to C# RestAPI which in turn queries MySQL Database to retrieve data and stores it in Machine Learning Classification Model and then API calls are made back to C# RestAPI. Lastly, C# RestAPI returns results of request. 
@@ -31,7 +42,7 @@ Project is created with:
 ## Frontend-
 ###  HTML/CSS/Bootstrap v5 
 ## Backend: 
-### C#
+### C# 6.0
 ### Python 3.10
 ## Database-
 ### Sqllite Studio v3.3.3

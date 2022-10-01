@@ -31,6 +31,7 @@ Project is created with:
 ## Frontend-
 ###  HTML/CSS/Bootstrap v5 
 ## Backend: 
+### C#
 ### Python 3.10
 ## Database-
 ### Sqllite Studio v3.3.3

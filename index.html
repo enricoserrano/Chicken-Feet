@@ -91,29 +91,32 @@
       </div>
       <div class="form-class">
         <div class="form-outline mb-3">
-          <input type="text" id="speciesType" class="form-control" required />
+          <input type="text" id="speciesType" class="form-control input1" required />
           <label class="form-label" for="speciesType">Species Type</label>
         </div>
 
         <div class="form-outline mb-3">
-          <input type="number" id="height" class="form-control" required />
+          <input type="number" id="height" class="form-control input2" required />
           <label class="form-label" for="height">Height (in cm)</label>
         </div>
 
         <div class="form-outline mb-3">
-          <input type="number" id="weight" class="form-control" required />
+          <input type="number" id="weight" class="form-control input3" required />
           <label class="form-label" for="weight">Weight (in kg)</label>
         </div>
 
         <div class="form-outline mb-3">
-          <input type="number" id="age" class="form-control" required />
+          <input type="number" id="age" class="form-control input4" required />
           <label class="form-label" for="age">Age</label>
         </div>
 
         <div class="form-outline mb-3">
           <label for="breed">Breed Type</label>
-          <select class="form-control" id="breed" onchange="setStatus()">
-          </select>
+          <select
+            class="form-control"
+            id="breed"
+            onchange="setStatus()"
+          ></select>
         </div>
 
         <div class="form-outline mb-3">
@@ -163,7 +166,7 @@
           </div>
         </div>
         <div class="form-outline mb-3">
-          <button type="button" class="btn btn-success" onclick="checkStatus()">
+          <button type="button" class="btn btn-success" id="checkbutton" onclick="checkStatus()">
             Check
           </button>
         </div>
@@ -248,45 +251,63 @@
     </div>
     <!-- MDB -->
     <script>
-        var runOnce = false;
+      let input1 = document.querySelector(".input1");
+      let input2 = document.querySelector(".input2");
+      let input3 = document.querySelector(".input3");
+      let input4 = document.querySelector(".input4");
+      document.getElementById("checkbutton").disabled = true;
+      input1.addEventListener("change", stateHandle);
+      input2.addEventListener("change", stateHandle);
+      input3.addEventListener("change", stateHandle);
+      input4.addEventListener("change", stateHandle);
 
-        function randomIntFromInterval(min, max) {
-          // min and max included
-          return Math.floor(Math.random() * (max - min + 1) + min);
-        }
+      function stateHandle() {
+          if(document.querySelector(".input1").value === "" || document.querySelector(".input2").value === "" || document.querySelector(".input3").value === "" || document.querySelector(".input4").value === "") {
+            document.getElementById("checkbutton").disabled = true;
+          } else {
+            document.getElementById("checkbutton").disabled = false;
+          }
+      }
+      var runOnce = false;
 
-        function setStatus() {
-          runOnce = true;
-        }
-        function fetchBreed() {
-          var btype = document.getElementById("breed").value;
-          const fetchBreed = fetch(
-            "http://localhost:8081/api/BreedInfo?breed_name=" + btype
-          ).then((response) => {
-            return response.json();
+      function randomIntFromInterval(min, max) {
+        // min and max included
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+
+      function setStatus() {
+        runOnce = true;
+      }
+      function fetchBreed() {
+        var btype = document.getElementById("breed").value;
+        const fetchBreed = fetch(
+          "http://localhost:8081/api/BreedInfo?breed_name=" + btype
+        ).then((response) => {
+          return response.json();
+        });
+      }
+      function petFacts() {
+        var btype = document.getElementById("breed").value;
+        var popup = document.getElementById("myPopup");
+
+        const fetchBreed = fetch(
+          "http://localhost:8081/api/AllFacts?breed_name=" + btype
+        )
+          .then((response) => response.text())
+          .then((data) => {
+            if (runOnce) {
+              document.getElementById("myPopup").innerHTML = data.split(",")[0];
+              runOnce = false;
+            } else {
+              document.getElementById("myPopup").innerHTML =
+                data.split(",")[randomIntFromInterval(0, 10)];
+            }
           });
-        }
-        function petFacts() {
-          var btype = document.getElementById("breed").value;
-          var popup = document.getElementById("myPopup");
+        //.then((x) => document.getElementById("myPopup").innerHTML = x[0]);
 
-          const fetchBreed = fetch(
-            "http://localhost:8081/api/AllFacts?breed_name=" + btype
-          )
-            .then((response) => response.text())
-            .then((data) => {
-              if (runOnce) {
-                document.getElementById("myPopup").innerHTML = data.split(",")[0];
-                runOnce = false;
-              } else {
-                document.getElementById("myPopup").innerHTML = data.split(",")[randomIntFromInterval(0, 10)];
-              }
-            });
-          //.then((x) => document.getElementById("myPopup").innerHTML = x[0]);
-
-          popup.classList.toggle("show");
-        }
-        /*
+        popup.classList.toggle("show");
+      }
+      /*
       function testform() {
         const fetchPromise = fetch("http://localhost:8081/api/Out")
           .then((response) => response.text())
@@ -301,113 +322,113 @@
           document.querySelector('input[name="gender"]:checked').value
         );
       }*/
-        function checkStatus() {
-          //healthy status
-          var stype = document.getElementById("speciesType").value;
-          var btype = document.getElementById("breed").value;
-          var height = document.getElementById("height").value;
-          var weight = document.getElementById("weight").value;
-          var age = document.getElementById("age").value;
-          var gender = document.querySelector(
-            'input[name="gender"]:checked'
-          ).value;
-          var addedLink =
-            "?breed=" +
-            btype +
-            "&sex=" +
-            gender +
-            "&age=" +
-            age +
-            "&weight=" +
-            weight +
-            "&height=" +
-            height;
+      function checkStatus() {
+        //healthy status
+        var stype = document.getElementById("speciesType").value;
+        var btype = document.getElementById("breed").value;
+        var height = document.getElementById("height").value;
+        var weight = document.getElementById("weight").value;
+        var age = document.getElementById("age").value;
+        var gender = document.querySelector(
+          'input[name="gender"]:checked'
+        ).value;
+        var addedLink =
+          "?breed=" +
+          btype +
+          "&sex=" +
+          gender +
+          "&age=" +
+          age +
+          "&weight=" +
+          weight +
+          "&height=" +
+          height;
 
-          var sandbtypeString = stype + " (" + btype + ")";
-          document.getElementById("sandbtype").innerHTML = sandbtypeString;
+        var sandbtypeString = stype + " (" + btype + ")";
+        document.getElementById("sandbtype").innerHTML = sandbtypeString;
 
-          //predictweight
-          const fetchHealthy = fetch(
-            "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictHealthyWeight" +
-              addedLink
-          )
-            .then((response) => response.text())
-            .then(
-              (data) => (document.getElementById("hweight").innerHTML = data)
-            );
+        //predictweight
+        const fetchHealthy = fetch(
+          "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictHealthyWeight" +
+            addedLink
+        )
+          .then((response) => response.text())
+          .then(
+            (data) => (document.getElementById("hweight").innerHTML = data)
+          );
 
-          //predict illness
-          const fetchIllness = fetch(
-            "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictIllness" +
-              addedLink
-          )
-            .then((response) => response.text())
-            .then((data) => {
-              document.getElementById("illnessbar").style.width = data + "%";
-              document.getElementById("illnessbar").innerHTML = data + "%";
-              if (parseInt(data) > 66) {
-                document
-                  .getElementById("illnessbar")
-                  .classList.remove("bg-success");
-                document
-                  .getElementById("illnessbar")
-                  .classList.remove("bg-warning");
-                document.getElementById("illnessbar").classList.add("bg-danger");
-              } else if (parseInt(data) > 33 && parseInt(data) < 66) {
-                document
-                  .getElementById("illnessbar")
-                  .classList.remove("bg-success");
-                document
-                  .getElementById("illnessbar")
-                  .classList.remove("bg-danger");
-                document.getElementById("illnessbar").classList.add("bg-warning");
-              } else if (parseInt(data) < 33) {
-                document
-                  .getElementById("illnessbar")
-                  .classList.remove("bg-warning");
-                document
-                  .getElementById("illnessbar")
-                  .classList.remove("bg-danger");
-                document.getElementById("illnessbar").classList.add("bg-success");
-              }
-            });
-          //predict behaviour
-          const fetchBehaviour = fetch(
-            "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictBehaviour" +
-              addedLink
-          )
-            .then((response) => response.text())
-            .then(
-              (data) => (document.getElementById("pbehaviour").innerHTML = data)
-            );
+        //predict illness
+        const fetchIllness = fetch(
+          "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictIllness" +
+            addedLink
+        )
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("illnessbar").style.width = data + "%";
+            document.getElementById("illnessbar").innerHTML = data + "%";
+            if (parseInt(data) > 66) {
+              document
+                .getElementById("illnessbar")
+                .classList.remove("bg-success");
+              document
+                .getElementById("illnessbar")
+                .classList.remove("bg-warning");
+              document.getElementById("illnessbar").classList.add("bg-danger");
+            } else if (parseInt(data) > 33 && parseInt(data) < 66) {
+              document
+                .getElementById("illnessbar")
+                .classList.remove("bg-success");
+              document
+                .getElementById("illnessbar")
+                .classList.remove("bg-danger");
+              document.getElementById("illnessbar").classList.add("bg-warning");
+            } else if (parseInt(data) < 33) {
+              document
+                .getElementById("illnessbar")
+                .classList.remove("bg-warning");
+              document
+                .getElementById("illnessbar")
+                .classList.remove("bg-danger");
+              document.getElementById("illnessbar").classList.add("bg-success");
+            }
+          });
+        //predict behaviour
+        const fetchBehaviour = fetch(
+          "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictBehaviour" +
+            addedLink
+        )
+          .then((response) => response.text())
+          .then(
+            (data) => (document.getElementById("pbehaviour").innerHTML = data)
+          );
 
-          //predict behaviour
-          const fetchBreed = fetch(
-            "http://localhost:8081/api/BreedInfo?breed_name=" + btype
-          )
-            .then((response) => response.json())
-            .then((data) => data.illness.split(","))
-            .then((x) => (document.getElementById("illnesses").innerHTML = x));
+        //predict behaviour
+        const fetchBreed = fetch(
+          "http://localhost:8081/api/BreedInfo?breed_name=" + btype
+        )
+          .then((response) => response.json())
+          .then((data) => data.illness.split(","))
+          .then((x) => (document.getElementById("illnesses").innerHTML = x));
 
-          //document.getElementById("illnessbar").element.style.backgroundColor = "red";
-          //document.getElementById("illnessbar").element.style.Color = "red";
+        //document.getElementById("illnessbar").element.style.backgroundColor = "red";
+        //document.getElementById("illnessbar").element.style.Color = "red";
 
-          //document.getElementById("illnessbar").classList.remove('bg-success');
-          //document.getElementById("illnessbar").classList.add('bg-danger');
-        }
+        //document.getElementById("illnessbar").classList.remove('bg-success');
+        //document.getElementById("illnessbar").classList.add('bg-danger');
+      }
 
-        const breedDropDown = () => {
-          htmlString = "";
-          const data = fetch("http://localhost:8081/api/AllNames")
-            .then((response) => response.text())
-            .then((data) => {
-              var elm = data.split(",");
-              for (let i = 0; i < elm.length; i++) {
-                htmlString += `<option>${elm[i]}</option>`;
-              }
-              document.getElementById("breed").innerHTML = htmlString;
-            });
-        }
+      const breedDropDown = () => {
+        htmlString = "";
+        const data = fetch("http://localhost:8081/api/AllNames")
+          .then((response) => response.text())
+          .then((data) => {
+            var elm = data.split(",");
+            for (let i = 0; i < elm.length; i++) {
+              htmlString += `<option>${elm[i]}</option>`;
+            }
+            document.getElementById("breed").innerHTML = htmlString;
+          });
+      };
     </script>
     <!-- MDB -->
     <script

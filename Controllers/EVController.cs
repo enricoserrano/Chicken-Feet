@@ -1,4 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Net.Http.Headers;
+
 using Microsoft.AspNetCore.Mvc;
 
 using EV.Data;
@@ -63,28 +68,49 @@ namespace EV.Controllers
             return Ok(facts);
         }
 
-        static void CallAPI(string url, string urlParameters)
-        {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(url);
+        // TO-DO: Code for referencing the Python back-end through APIs to set C# as the controller
+        // public class DataObject
+        // {
+        //     public string Name { get; set; }
+        // }
+        // static void CallAPI(string url, string urlParameters)
+        // {
+        //     HttpClient client = new HttpClient();
+        //     client.BaseAddress = new Uri(url);
 
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            HttpResponseMessage response = client.GetAsync(urlParameters).Result;
-            if (response.IsSuccessStatusCode)
-            {
-                var data = response.Content.ReadAsAsync<IEnumerable<DataObject>>().Result;
-                return data;
-            }
-            client.Dispose();
-        }
+        //     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        //     HttpResponseMessage response = client.GetAsync(urlParameters).Result;
+        //     if (response.IsSuccessStatusCode)
+        //     {
+        //         var DataObject = response.Content.ReadAsAsync<IEnumerable<DataObject>>().Result;
+        //         return DataObject;
+        //     }
+        //     client.Dispose();
+        // }
 
-        // GET /api/PredictWeight
-        [HttpGet("PredictWeight")]
-        public ActionResult PredictWeight(PetDetailsInputDto p) {
-            string url = "";
-            string urlParameters = "";
-            data = CallAPI(url, urlParameters);
-            Ok(data);
-        }
+        // // GET /api/PredictWeight
+        // [HttpGet("PredictWeight")]
+        // public ActionResult PredictWeight(PetDetailsInputDto p) {
+        //     string url = "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictHealthyWeight";
+        //     string urlParameters = "?breed=" + p.breed + "&sex=" + p.gender + "&age=" + p.age + "&weight=" + p.weight + "&height=" + p.height;
+        //     data = CallAPI(url, urlParameters);
+        //     Ok(data);
+        // }
+        // // GET /api/PredictIllness
+        // [HttpGet("PredictIllness")]
+        // public ActionResult PredictIllness(PetDetailsInputDto p) {
+        //     string url = "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictIllness";
+        //     string urlParameters = "?breed=" + p.breed + "&sex=" + p.gender + "&age=" + p.age + "&weight=" + p.weight + "&height=" + p.height;
+        //     data = CallAPI(url, urlParameters);
+        //     Ok(data);
+        // }
+        // // GET /api/PredictBehaviour
+        // [HttpGet("PredictBehaviour")]
+        // public ActionResult PredictBehaviour(PetDetailsInputDto p) {
+        //     string url = "https://mysterious-cliffs-03988.herokuapp.com/https://pythonapi21.herokuapp.com/predictBehaviour";
+        //     string urlParameters = "?breed=" + p.breed + "&sex=" + p.gender + "&age=" + p.age + "&weight=" + p.weight + "&height=" + p.height;
+        //     data = CallAPI(url, urlParameters);
+        //     Ok(data);
+        // }
     }
 }

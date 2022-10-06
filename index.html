@@ -346,9 +346,19 @@
                addedLink
            )
              .then((response) => response.text())
-             .then(
-               (data) => (document.getElementById("hweight").innerHTML = data)
-             );
+             .then((data) => {
+               if(data == "Healthy") {
+                  document.getElementById("hweight").innerHTML = data;
+                  document.getElementById("hweight").style.color = "green";
+               } else if (data == "Overweight") {
+                  document.getElementById("hweight").innerHTML = data;
+                  document.getElementById("hweight").style.color = "red";
+               } else if (data == "Underweight") {
+                  document.getElementById("hweight").innerHTML = data;
+                  document.getElementById("hweight").style.color = "red";
+               }
+
+            });
          
            //predict illness
            const fetchIllness = fetch(
